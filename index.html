@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Nemat-Zadeh | Senior WordPress & Frontend Developer</title>
+    <style>
+        :root {
+            --primary: #0a66c2;
+            --primary-dark: #004182;
+            --dark: #191b1f;
+            --gray: #5e6d7a;
+            --light: #f3f6f8;
+            --border: #e0e6eb;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background: #f0f2f5; color: #333; line-height: 1.5; padding: 20px; }
+        .resume-card { max-width: 850px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #0a66c2, #004182); color: #fff; padding: 40px; position: relative; }
+        .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+        .header h2 { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 15px; }
+        .contact-bar { display: flex; flex-wrap: wrap; gap: 15px; font-size: 13px; opacity: 0.95; }
+        .contact-bar a { color: #fff; text-decoration: none; font-weight: 500; }
+        .badge { background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px; font-size: 12px; }
+        .content { padding: 35px 40px; display: grid; grid-template-columns: 2fr 1fr; gap: 35px; }
+        .section-title { font-size: 16px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid var(--border); padding-bottom: 6px; margin-bottom: 18px; }
+        .exp-item { margin-bottom: 22px; }
+        .exp-role { font-size: 15px; font-weight: 700; color: var(--dark); }
+        .exp-company { font-size: 13px; color: var(--primary); font-weight: 600; margin-bottom: 4px; }
+        .exp-date { font-size: 12px; color: var(--gray); margin-bottom: 8px; }
+        .exp-desc { font-size: 13px; color: #444; }
+        .exp-desc li { margin-left: 18px; margin-bottom: 4px; }
+        .skills-tag { display: inline-block; background: #e8f3fc; color: var(--primary-dark); font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 6px; margin: 0 4px 6px 0; }
+        .edu-item { margin-bottom: 15px; }
+        .edu-degree { font-size: 14px; font-weight: 700; color: var(--dark); }
+        .edu-school { font-size: 13px; color: var(--gray); }
+        .print-btn { display: block; width: 100%; max-width: 850px; margin: 15px auto; padding: 12px; background: #0a66c2; color: #fff; text-align: center; font-weight: 600; border-radius: 8px; border: none; cursor: pointer; text-decoration: none; }
+        @media print {
+            body { background: #fff; padding: 0; }
+            .resume-card { box-shadow: none; border-radius: 0; max-width: 100%; }
+            .print-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF for LinkedIn</button>
+
+    <div class="resume-card">
+        <div class="header">
+            <h1>Mohammad Nemat-Zadeh</h1>
+            <h2>Senior WordPress & Frontend Developer | Biomedical Engineer</h2>
+            <div class="contact-bar">
+                <span>📍 Ahvaz, Iran (Available for Remote)</span>
+                <span>✉️ <a href="mailto:mamadnemat061@gmail.com">mamadnemat061@gmail.com</a></span>
+                <span>📞 +98 901 039 5404</span>
+                <span class="badge">Arabic: Advanced</span>
+                <span class="badge">English: Professional</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="main-column">
+                <div class="section-title">Summary</div>
+                <p style="font-size: 13.5px; color: #444; margin-bottom: 25px;">
+                    Results-oriented WordPress & Frontend Developer and Biomedical Engineering graduate with extensive experience in commercial theme creation, high-scale WooCommerce management (+700 products), and multi-vendor booking systems (Dokan + Bookly). Proven expertise in responsive design, PHP 8.3 optimization, and delivering clean, maintainable web applications.
+                </p>
+
+                <div class="section-title">Work Experience</div>
+                
+                <div class="exp-item">
+                    <div class="exp-role">Senior Frontend & WordPress Developer (Freelance / Remote)</div>
+                    <div class="exp-company">NematWeb & Digital Marketplaces</div>
+                    <div class="exp-date">2023 – Present | Remote</div>
+                    <ul class="exp-desc">
+                        <li>Developed <strong>DOPS</strong>: Commercial RTL Persian podcast HTML/Tailwind template featuring custom audio players and modular architecture for marketplace release.</li>
+                        <li>Built an advanced multi-vendor service marketplace integrating <strong>Dokan Pro</strong> with <strong>Bookly Pro</strong> and branch/geo-location filtering.</li>
+                        <li>Engineered custom WordPress themes (NematTheme) highly optimized for Elementor Pro and WooCommerce with sub-2s load times.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-role">Webmaster & Technical Lead</div>
+                    <div class="exp-company">Healthcare & Pharmacy Sector</div>
+                    <div class="exp-date">Apr 2024 – Present | Ahvaz, Iran</div>
+                    <ul class="exp-desc">
+                        <li>Directed WooCommerce store operations, inventory syncing, and security hardening.</li>
+                        <li>Resolved complex server anomalies, database bloat, and PHP 8.3 migration errors.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-role">Web Designer & UI Specialist</div>
+                    <div class="exp-company">Farahoosh Academy</div>
+                    <div class="exp-date">Oct 2024 – Dec 2024 | Ahvaz, Iran</div>
+                    <ul class="exp-desc">
+                        <li>Redesigned conversion landing pages using Elementor Pro, boosting user engagement and mobile responsiveness.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="side-column">
+                <div class="section-title">Key Skills</div>
+                <div style="margin-bottom: 25px;">
+                    <span class="skills-tag">WordPress</span>
+                    <span class="skills-tag">WooCommerce</span>
+                    <span class="skills-tag">Elementor Pro</span>
+                    <span class="skills-tag">Tailwind CSS</span>
+                    <span class="skills-tag">HTML5 / CSS3</span>
+                    <span class="skills-tag">JavaScript</span>
+                    <span class="skills-tag">PHP</span>
+                    <span class="skills-tag">Woodmart Plus</span>
+                    <span class="skills-tag">Dokan Pro</span>
+                    <span class="skills-tag">Bookly Pro</span>
+                    <span class="skills-tag">Technical SEO</span>
+                    <span class="skills-tag">Figma</span>
+                </div>
+
+                <div class="section-title">Education</div>
+                <div class="edu-item">
+                    <div class="edu-degree">B.Sc. in Biomedical Engineering</div>
+                    <div class="edu-school">Payame Noor University (2016 – 2020)</div>
+                    <div style="font-size: 12px; color: var(--primary); font-weight: 600; margin-top: 2px;">GPA: 17.00 / 20.00</div>
+                </div>
+
+                <div class="section-title" style="margin-top: 25px;">Languages</div>
+                <div style="font-size: 13px; line-height: 1.8;">
+                    <div>🇮🇷 <strong>Persian:</strong> Native</div>
+                    <div>🇸🇦 <strong>Arabic:</strong> Advanced (Fluent)</div>
+                    <div>🇬🇧 <strong>English:</strong> Professional</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
