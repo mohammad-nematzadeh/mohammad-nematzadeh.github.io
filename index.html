@@ -1,137 +1,695 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Nemat-Zadeh | Senior WordPress & Frontend Developer</title>
-    <style>
-        :root {
-            --primary: #0a66c2;
-            --primary-dark: #004182;
-            --dark: #191b1f;
-            --gray: #5e6d7a;
-            --light: #f3f6f8;
-            --border: #e0e6eb;
+    <title>محمد نعمت‌زاده | توسعه‌دهنده ارشد افزونه‌های وردپرس و متخصص پلتفرم‌های هوش مصنوعی</title>
+    <meta name="description" content="پورتفولیو و رزومه مهندسی محمد نعمت‌زاده: توسعه‌دهنده افزونه‌های اختصاصی وردپرس، معمار ووکامرس، توسعه‌دهنده پلتفرم هوش مصنوعی ۲ام‌تیم و اتوماسیون‌های سازمانی">
+    
+    <!-- Google Fonts: Vazirmatn + Space Grotesk + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#090d16',
+                            card: '#111726',
+                            cardHover: '#161f33',
+                            border: 'rgba(255, 255, 255, 0.08)',
+                            borderHover: 'rgba(99, 102, 241, 0.4)'
+                        },
+                        brand: {
+                            primary: '#6366f1',
+                            secondary: '#8b5cf6',
+                            accent: '#06b6d4',
+                            emerald: '#10b981',
+                            amber: '#f59e0b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        display: ['Space Grotesk', 'Vazirmatn', 'sans-serif']
+                    }
+                }
+            }
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background: #f0f2f5; color: #333; line-height: 1.5; padding: 20px; }
-        .resume-card { max-width: 850px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); overflow: hidden; }
-        .header { background: linear-gradient(135deg, #0a66c2, #004182); color: #fff; padding: 40px; position: relative; }
-        .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
-        .header h2 { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 15px; }
-        .contact-bar { display: flex; flex-wrap: wrap; gap: 15px; font-size: 13px; opacity: 0.95; }
-        .contact-bar a { color: #fff; text-decoration: none; font-weight: 500; }
-        .badge { background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px; font-size: 12px; }
-        .content { padding: 35px 40px; display: grid; grid-template-columns: 2fr 1fr; gap: 35px; }
-        .section-title { font-size: 16px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid var(--border); padding-bottom: 6px; margin-bottom: 18px; }
-        .exp-item { margin-bottom: 22px; }
-        .exp-role { font-size: 15px; font-weight: 700; color: var(--dark); }
-        .exp-company { font-size: 13px; color: var(--primary); font-weight: 600; margin-bottom: 4px; }
-        .exp-date { font-size: 12px; color: var(--gray); margin-bottom: 8px; }
-        .exp-desc { font-size: 13px; color: #444; }
-        .exp-desc li { margin-left: 18px; margin-bottom: 4px; }
-        .skills-tag { display: inline-block; background: #e8f3fc; color: var(--primary-dark); font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 6px; margin: 0 4px 6px 0; }
-        .edu-item { margin-bottom: 15px; }
-        .edu-degree { font-size: 14px; font-weight: 700; color: var(--dark); }
-        .edu-school { font-size: 13px; color: var(--gray); }
-        .print-btn { display: block; width: 100%; max-width: 850px; margin: 15px auto; padding: 12px; background: #0a66c2; color: #fff; text-align: center; font-weight: 600; border-radius: 8px; border: none; cursor: pointer; text-decoration: none; }
-        @media print {
-            body { background: #fff; padding: 0; }
-            .resume-card { box-shadow: none; border-radius: 0; max-width: 100%; }
-            .print-btn { display: none; }
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #090d16;
+            color: #f1f5f9;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 85% 65%, rgba(139, 92, 246, 0.1) 0%, transparent 45%),
+                radial-gradient(circle at 50% 90%, rgba(6, 182, 212, 0.08) 0%, transparent 40%);
+        }
+        .glass-panel {
+            background: rgba(17, 23, 38, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+        .glass-card {
+            background: rgba(17, 23, 38, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(99, 102, 241, 0.45);
+            box-shadow: 0 16px 36px -10px rgba(99, 102, 241, 0.18);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a5b4fc 0%, #c084fc 50%, #67e8f9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .filter-btn.active {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: #ffffff;
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090d16;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
         }
     </style>
 </head>
-<body>
+<body class="selection:bg-indigo-500 selection:text-white">
 
-    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF for LinkedIn</button>
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-white/5 py-4 px-6 md:px-12 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 flex items-center justify-center font-display font-bold text-lg text-white shadow-lg shadow-indigo-500/25">
+                    MN
+                </div>
+                <div>
+                    <span class="font-bold text-base tracking-wide text-white block">محمد نعمت‌زاده</span>
+                    <span class="text-xs text-slate-400 font-mono">Senior Engineer & Creator</span>
+                </div>
+            </div>
 
-    <div class="resume-card">
-        <div class="header">
-            <h1>Mohammad Nemat-Zadeh</h1>
-            <h2>Senior WordPress & Frontend Developer | Biomedical Engineer</h2>
-            <div class="contact-bar">
-                <span>📍 Ahvaz, Iran (Available for Remote)</span>
-                <span>✉️ <a href="mailto:mamadnemat061@gmail.com">mamadnemat061@gmail.com</a></span>
-                <span>📞 +98 901 039 5404</span>
-                <span class="badge">Arabic: Advanced</span>
-                <span class="badge">English: Professional</span>
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+                <a href="#projects" class="hover:text-indigo-400 transition-colors">پروژه‌های شاخص</a>
+                <a href="#plugins" class="hover:text-indigo-400 transition-colors">افزونه‌های اختصاصی</a>
+                <a href="#ai-platform" class="hover:text-indigo-400 transition-colors">پلتفرم هوش مصنوعی</a>
+                <a href="#skills" class="hover:text-indigo-400 transition-colors">مهارت‌های فنی</a>
+                <a href="#contact" class="hover:text-indigo-400 transition-colors">ارتباط</a>
+            </nav>
+
+            <!-- Status & Action CTA -->
+            <div class="flex items-center gap-3">
+                <div class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>آماده همکاری (Remote)</span>
+                </div>
+                <a href="https://github.com/nemat-web" target="_blank" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-semibold flex items-center gap-2 transition-all">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>گیت‌هاب</span>
+                </a>
             </div>
         </div>
+    </header>
 
-        <div class="content">
-            <div class="main-column">
-                <div class="section-title">Summary</div>
-                <p style="font-size: 13.5px; color: #444; margin-bottom: 25px;">
-                    Results-oriented WordPress & Frontend Developer and Biomedical Engineering graduate with extensive experience in commercial theme creation, high-scale WooCommerce management (+700 products), and multi-vendor booking systems (Dokan + Bookly). Proven expertise in responsive design, PHP 8.3 optimization, and delivering clean, maintainable web applications.
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-20 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Text Content -->
+            <div class="lg:col-span-8 text-right space-y-6">
+                <!-- Eyebrow Pill -->
+                <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-panel border border-indigo-500/20 text-indigo-300 text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                    <span>توسعه‌دهنده افزونه‌های اختصاصی وردپرس & متخصص مهندسی هوش مصنوعی</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+                    خلق محصولات دیجیتال مدرن،<br>
+                    <span class="gradient-text">افزونه‌های پیچیده و پلتفرم‌های هوشمند</span>
+                </h1>
+
+                <p class="text-slate-300 text-base sm:text-lg font-light leading-relaxed max-w-3xl">
+                    من <strong>محمد نعمت‌زاده</strong> هستم؛ فارغ‌التحصیل مهندسی پزشکی (معدل ۱۷) با تمرکز تخصصی بر توسعه افزونه‌های اختصاصی وردپرس (سیستم‌های ویدیویی، صوتی و ابری)، معماری فروشگاه‌های ووکامرس با نرخ تبدیل بالا (+۳۰۰۰ سفارش موفق)، و طراحی پلتفرم‌های نوین هوش مصنوعی (SaaS ۲ام‌تیم).
                 </p>
 
-                <div class="section-title">Work Experience</div>
-                
-                <div class="exp-item">
-                    <div class="exp-role">Senior Frontend & WordPress Developer (Freelance / Remote)</div>
-                    <div class="exp-company">NematWeb & Digital Marketplaces</div>
-                    <div class="exp-date">2023 – Present | Remote</div>
-                    <ul class="exp-desc">
-                        <li>Developed <strong>DOPS</strong>: Commercial RTL Persian podcast HTML/Tailwind template featuring custom audio players and modular architecture for marketplace release.</li>
-                        <li>Built an advanced multi-vendor service marketplace integrating <strong>Dokan Pro</strong> with <strong>Bookly Pro</strong> and branch/geo-location filtering.</li>
-                        <li>Engineered custom WordPress themes (NematTheme) highly optimized for Elementor Pro and WooCommerce with sub-2s load times.</li>
-                    </ul>
-                </div>
-
-                <div class="exp-item">
-                    <div class="exp-role">Webmaster & Technical Lead</div>
-                    <div class="exp-company">Healthcare & Pharmacy Sector</div>
-                    <div class="exp-date">Apr 2024 – Present | Ahvaz, Iran</div>
-                    <ul class="exp-desc">
-                        <li>Directed WooCommerce store operations, inventory syncing, and security hardening.</li>
-                        <li>Resolved complex server anomalies, database bloat, and PHP 8.3 migration errors.</li>
-                    </ul>
-                </div>
-
-                <div class="exp-item">
-                    <div class="exp-role">Web Designer & UI Specialist</div>
-                    <div class="exp-company">Farahoosh Academy</div>
-                    <div class="exp-date">Oct 2024 – Dec 2024 | Ahvaz, Iran</div>
-                    <ul class="exp-desc">
-                        <li>Redesigned conversion landing pages using Elementor Pro, boosting user engagement and mobile responsiveness.</li>
-                    </ul>
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center gap-4 pt-4">
+                    <a href="#projects" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-600 hover:to-violet-700 text-white font-semibold text-sm shadow-lg shadow-indigo-500/25 transition-all duration-200 hover:-translate-y-0.5">
+                        مشاهده ویترین پروژه‌ها و افزونه‌ها
+                    </a>
+                    <a href="mailto:mamadnemat061@gmail.com" class="px-6 py-3.5 rounded-xl glass-panel hover:bg-white/10 text-slate-200 font-semibold text-sm border border-white/10 transition-all">
+                        ارسال ایمیل مستقیم
+                    </a>
+                    <a href="https://t.me/mohamad_nemat" target="_blank" class="px-5 py-3.5 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 border border-sky-500/25 font-semibold text-sm transition-all flex items-center gap-2">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.946z"/></svg>
+                        <span>تلگرام</span>
+                    </a>
                 </div>
             </div>
 
-            <div class="side-column">
-                <div class="section-title">Key Skills</div>
-                <div style="margin-bottom: 25px;">
-                    <span class="skills-tag">WordPress</span>
-                    <span class="skills-tag">WooCommerce</span>
-                    <span class="skills-tag">Elementor Pro</span>
-                    <span class="skills-tag">Tailwind CSS</span>
-                    <span class="skills-tag">HTML5 / CSS3</span>
-                    <span class="skills-tag">JavaScript</span>
-                    <span class="skills-tag">PHP</span>
-                    <span class="skills-tag">Woodmart Plus</span>
-                    <span class="skills-tag">Dokan Pro</span>
-                    <span class="skills-tag">Bookly Pro</span>
-                    <span class="skills-tag">Technical SEO</span>
-                    <span class="skills-tag">Figma</span>
-                </div>
+            <!-- Profile & Quick Stats Card -->
+            <div class="lg:col-span-4">
+                <div class="glass-card rounded-2xl p-6 border border-white/10 space-y-6 relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-36 h-36 bg-indigo-500/20 rounded-full blur-2xl pointer-events-none"></div>
+                    
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-500 to-violet-500 p-0.5">
+                            <img src="https://github.com/nemat-web.png" alt="Mohammad Nemat-Zadeh" class="w-full h-full object-cover rounded-[14px]">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg">محمد نعمت‌زاده</h3>
+                            <p class="text-xs text-indigo-300 font-mono">Ahvaz, Iran (Open to Remote)</p>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="badge bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">عربی: پیشرفته</span>
+                                <span class="badge bg-violet-500/20 text-violet-300 border border-violet-500/30">انگلیسی: تخصصی</span>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="section-title">Education</div>
-                <div class="edu-item">
-                    <div class="edu-degree">B.Sc. in Biomedical Engineering</div>
-                    <div class="edu-school">Payame Noor University (2016 – 2020)</div>
-                    <div style="font-size: 12px; color: var(--primary); font-weight: 600; margin-top: 2px;">GPA: 17.00 / 20.00</div>
+                    <div class="grid grid-cols-2 gap-3 pt-2">
+                        <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 text-center">
+                            <span class="block text-2xl font-black text-indigo-400 font-mono">+۳۰۰۰</span>
+                            <span class="text-xs text-slate-400">سفارش ثبت‌شده مشتریان</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 text-center">
+                            <span class="block text-2xl font-black text-violet-400 font-mono">۱۰۰٪</span>
+                            <span class="text-xs text-slate-400">آپ‌تایم Cloudflare Worker</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 text-center">
+                            <span class="block text-2xl font-black text-cyan-400 font-mono">۳</span>
+                            <span class="text-xs text-slate-400">افزونه مهندسی‌شده</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 text-center">
+                            <span class="block text-2xl font-black text-emerald-400 font-mono">۱۷.۰۰</span>
+                            <span class="text-xs text-slate-400">معدل مهندسی پزشکی</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="section-title" style="margin-top: 25px;">Languages</div>
-                <div style="font-size: 13px; line-height: 1.8;">
-                    <div>🇮🇷 <strong>Persian:</strong> Native</div>
-                    <div>🇸🇦 <strong>Arabic:</strong> Advanced (Fluent)</div>
-                    <div>🇬🇧 <strong>English:</strong> Professional</div>
+        </div>
+    </section>
+
+    <!-- 4 Pillars Section / Filterable Showcase -->
+    <section id="projects" class="max-w-7xl mx-auto px-6 md:px-12 py-16">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+                <div class="inline-flex items-center gap-2 text-xs font-mono text-indigo-400 uppercase tracking-widest mb-2">
+                    <span>// PORTFOLIO ARCHITECTURE</span>
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white">ویترین پروژه‌ها و نوآوری‌های فنی</h2>
+                <p class="text-slate-400 text-sm mt-2">دسته‌بندی شده در ۴ ستون: افزونه‌های اختصاصی، پلتفرم‌های هوش مصنوعی، فروشگاه‌های ووکامرس و محصولات آماده</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap items-center gap-2">
+                <button onclick="filterProjects('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs font-semibold glass-panel border border-white/10 transition-all">همه</button>
+                <button onclick="filterProjects('plugins')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold glass-panel border border-white/10 text-slate-300 transition-all">افزونه‌های اختصاصی</button>
+                <button onclick="filterProjects('ai')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold glass-panel border border-white/10 text-slate-300 transition-all">هوش مصنوعی و اتوماسیون</button>
+                <button onclick="filterProjects('ecommerce')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold glass-panel border border-white/10 text-slate-300 transition-all">فروشگاه‌های ووکامرس</button>
+                <button onclick="filterProjects('products')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold glass-panel border border-white/10 text-slate-300 transition-all">محصولات تجاری</button>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+
+            <!-- Card 1: 2mteam AI Platform -->
+            <div class="project-card glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between" data-category="ai">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="badge bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">AI SaaS Platform</span>
+                        <span class="text-xs font-mono text-slate-400">۲۰۲۶</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">پلتفرم هوش مصنوعی ۲ام‌تیم (2mteam)</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        دستیار گفتگوی هوشمند بومی به زبان فارسی مجهز به استریم زنده کلمات (SSE)، رندر فرمول‌های ریاضی و کدهای برنامه‌نویسی، و پنل مدیریت مانیتورینگ توکن‌ها و لاگ‌ها.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">PHP 8.3</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">SSE Streaming</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Tailwind CSS</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Admin Logs</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                    <a href="https://2mteam.ir/chat" target="_blank" class="flex-1 text-center py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition-all">
+                        مشاهده پنل چت هوشمند
+                    </a>
+                    <a href="https://2mteam.ir" target="_blank" class="px-3.5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-semibold transition-all">
+                        لندینگ
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: Shoppable Reels Engine -->
+            <div class="project-card glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between" data-category="plugins">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="badge bg-violet-500/20 text-violet-300 border border-violet-500/30">Custom WP Plugin</span>
+                        <span class="text-xs font-mono text-emerald-400">۳ سایت فعال</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">سیستم ویدیویی ریلز خریدنی ووکامرس</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        موتور تعاملی ویدیویی مشابه اینستاگرام ریلز برای فروشگاه‌ها؛ تماشای روان ویدیوهای عمودی و امکان انتخاب و افزودن مستقیم محصول معرفی‌شده به سبد خرید از روی همان ویدیو.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">WooCommerce Hook</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Vertical Video</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">AJAX Cart</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Mobile Gesture</span>
+                    </div>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-400">
+                    <strong class="text-white">پیاده‌سازی‌شده در:</strong> قاصدک (قبل و بعد نصب)، جاپاتو (ست‌های استایل‌بوک)، نیلسون شاپ (رضایت خریداران)
+                </div>
+            </div>
+
+            <!-- Card 3: BIOS Podcast Engine -->
+            <div class="project-card glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between" data-category="plugins">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="badge bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Audio & Podcast Engine</span>
+                        <span class="text-xs font-mono text-slate-400">bios-pod.com</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">افزونه انتشار خودکار پادکست و پلیر چسبان</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        افزونه اختصاصی همگام‌ساز خودکار با فید RSS، تولید صفحات آرشیو و سینگل اپیزودها، و پلیر صوتی چسبان آنلاین (`Sticky Audio Player`) با قابلیت پخش مداوم حین وبگردی و شورت‌کد اختصاصی.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">RSS XML Parser</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Sticky Audio Player</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Shortcode API</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Castbox Sync</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                    <a href="https://bios-pod.com/" target="_blank" class="flex-1 text-center py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold transition-all">
+                        مشاهده زنده پادکست بیوس
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4: Cloudflare Workers Telegram Notifier -->
+            <div class="project-card glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between" data-category="plugins">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="badge bg-amber-500/20 text-amber-300 border border-amber-500/30">Serverless & Cloud</span>
+                        <span class="text-xs font-mono text-emerald-400">۱۰۰٪ بدون قطعی</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">افزونه اعلان تلگرام سفارشات با Cloudflare Workers</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        ارسال بلادرنگ مشخصات سفارشات به تلگرام مدیر فروشگاه با استفاده از ورکر سرورلس کلودفلر؛ حل کامل معضل فیلترینگ تلگرام با آپ‌تایم ۱۰۰٪ و بدون نیاز به هاست پروکسی جداگانه.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Cloudflare Workers</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Telegram Bot API</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">WooCommerce Webhook</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Edge Computing</span>
+                    </div>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-400">
+                    <strong class="text-white">وضعیت عملیاتی:</strong> در حال کار روی فروشگاه نیلسون شاپ با هزاران پیام سفارش ثبت‌شده موفق.
+                </div>
+            </div>
+
+            <!-- Card 5: NilsonShop -->
+            <div class="project-card glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between" data-category="ecommerce">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="badge bg-pink-500/20 text-pink-300 border border-pink-500/30">High-Scale Store</span>
+                        <span class="text-xs font-mono text-slate-400">nilsonshop.com</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">فروشگاه اینترنتی نیلسون شاپ (Nilson Shop)</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        مرجع تخصصی کرلی بدون حرارت در ایران با بیش از ۳۰۰۰ سفارش؛ مجهز به سیستم پیشنهاد هوشمند کالا بر اساس قد مو و سبک فر، و محاسبه‌گر پویای مبلغ اقساط ترب‌پی روی کارت‌ها.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">WooCommerce</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">TorobPay Installment</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Interactive Quiz</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Social Proof</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                    <a href="https://nilsonshop.com/" target="_blank" class="flex-1 text-center py-2.5 rounded-xl bg-pink-600 hover:bg-pink-500 text-white text-xs font-semibold transition-all">
+                        مشاهده سایت نیلسون شاپ
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 6: Japatoo -->
+            <div class="project-card glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between" data-category="ecommerce">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="badge bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Interactive Retail</span>
+                        <span class="text-xs font-mono text-slate-400">japatoo.com</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">فروشگاه کیف، کفش و صندل جاپاتو (Japatoo)</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        طراحی و توسعه فروشگاه تعاملی با قابلیت جستجوی گفتگومحور («از من بپرس…!»)، گالری ریلز استایل‌بوک، جدول سایزبندی سانتی‌متری روی کارت محصول و درگاه اقساطی اسنپ‌پی.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Snapp! Pay</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Conversational Search</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Style Lookbook</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Color Swatches</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                    <a href="https://japatoo.com/" target="_blank" class="flex-1 text-center py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-all">
+                        مشاهده سایت جاپاتو
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 7: Avin Club -->
+            <div class="project-card glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between" data-category="ecommerce">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="badge bg-blue-500/20 text-blue-300 border border-blue-500/30">Sports Specialist</span>
+                        <span class="text-xs font-mono text-slate-400">avinclub.ir</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">فروشگاه تخصصی کفش اورجینال آوین کلاب</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        فروشگاه تخصصی کفش‌های اورجینال رانینگ و دوومیدانی با سیستم فیلترینگ پیشرفته بر پایه تک‌سایز، برند و وضعیت سلامت کالا، پاپ‌آپ میلی‌متری اندازه‌گیری سایز پا و استعلام بارکد کارخانه.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">AJAX Filter</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Exact MM Sizing</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Barcode Lookup</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Zibal Gateway</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                    <a href="https://avinclub.ir/" target="_blank" class="flex-1 text-center py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold transition-all">
+                        مشاهده سایت آوین کلاب
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 8: Ghasedak Decor -->
+            <div class="project-card glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between" data-category="ecommerce">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="badge bg-purple-500/20 text-purple-300 border border-purple-500/30">Decor & Service</span>
+                        <span class="text-xs font-mono text-slate-400">decorasionghasedak.com</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">فروشگاه و خدمات دکوراسیون قاصدک</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        تلفیق مدل فروشگاهی (+۸۰۰ متریال ساختمانی) با سفارش خدمات طراحی سه‌بعدی کابینت، انتخاب‌گر هوشمند طرح متناسب با فضا و جعبه جادویی ویدیوهای قبل و بعد از نصب.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Hybrid Model</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Smart Material Selector</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Before / After Video</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">OTP SMS Login</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                    <a href="https://decorasionghasedak.com/" target="_blank" class="flex-1 text-center py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold transition-all">
+                        مشاهده سایت قاصدک
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 9: Abji Store -->
+            <div class="project-card glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between" data-category="ecommerce">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="badge bg-rose-500/20 text-rose-300 border border-rose-500/30">Beauty & Salon</span>
+                        <span class="text-xs font-mono text-slate-400">abjistore.ir</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">فروشگاه لوازم آرایشی و بهداشتی آبجی استور</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        پلتفرم فروشگاهی حوزه زیبایی و تجهیزات سالنی با معماری Mobile-First، اتصال به درگاه‌های اقساطی ۴ ماهه اسنپ‌پی، ترب‌پی و دیجی‌پی، مگامنو چندسطحی و بهینه‌سازی فرمت تصاویر WebP.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">SnappPay + DigiPay</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Mobile First</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Multi-tier MegaMenu</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">WebP Performance</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                    <a href="https://abjistore.ir/" target="_blank" class="flex-1 text-center py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-semibold transition-all">
+                        مشاهده سایت آبجی استور
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 10: DOPS Podcast Template -->
+            <div class="project-card glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between" data-category="products">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="badge bg-teal-500/20 text-teal-300 border border-teal-500/30">Commercial Template</span>
+                        <span class="text-xs font-mono text-slate-400">Marketplace Ready</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">قالب تجاری دوپس (DOPS Podcast Template)</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        قالب فوق‌سریع و ماژولار پادکست به سبک فارسی و راست‌چین (RTL) با Tailwind CSS؛ بدون فریم‌ورک‌های سنگین با پلیر صوتی جاوااسکریپتی سفارشی و سرعت لود زیر ۱ ثانیه.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Tailwind CSS</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">HTML5 Audio API</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">100% RTL Native</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Sub-second Load</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                    <span class="text-xs text-slate-400">محصول آماده تجاری برای ژاکت و راست‌چین</span>
+                </div>
+            </div>
+
+            <!-- Card 11: Python Bulk WooCommerce Automation -->
+            <div class="project-card glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between" data-category="ai">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="badge bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Python Automation</span>
+                        <span class="text-xs font-mono text-slate-400">Data Pipeline</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">اتوماسیون تزریق دسته‌ای محصولات ووکامرس</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        اسکریپت‌های اتوماسیون داده‌محور و پایپ‌لاین‌های پایتونی برای استخراج، پاکسازی و ایمپورت خودکار صدها محصول به ووکامرس همراه با ویژگی‌ها، تصاویر و متغیرها بدون خطای انسانی.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Python Scripting</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">WooCommerce REST API</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Data Scraping</span>
+                        <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Agentic Automation</span>
+                    </div>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-400">
+                    <strong class="text-white">دستاورد:</strong> صرفه‌جویی بیش از ۱۰۰ ساعت زمان اپراتور انسانی در ثبت محصولات فروشگاهی.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills & Tech Architecture Section -->
+    <section id="skills" class="max-w-7xl mx-auto px-6 md:px-12 py-16 border-t border-white/5">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">// TECH MATRIX</span>
+            <h2 class="text-3xl font-extrabold text-white mt-2">تسلط فنی و جعبه‌ابزار مهندسی</h2>
+            <p class="text-slate-400 text-sm mt-2">تلفیق توسعه عمیق وب، زیرساخت‌های ابری و مهندسی سیستم‌های مبتنی بر هوش مصنوعی</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Box 1 -->
+            <div class="glass-card rounded-2xl p-6 border border-white/10 space-y-4">
+                <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-mono font-bold text-lg">
+                    WP
+                </div>
+                <h3 class="font-bold text-white text-base">توسعه افزونه و ووکامرس</h3>
+                <ul class="text-xs text-slate-300 space-y-2">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>کدنویسی افزونه‌های اختصاصی PHP</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>معماری هوک‌های WooCommerce</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>یکپارچه‌سازی درگاه‌های پرداخت اقساطی</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>بهینه‌سازی دیتابیس در PHP 8.3</li>
+                </ul>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="glass-card rounded-2xl p-6 border border-white/10 space-y-4">
+                <div class="w-10 h-10 rounded-xl bg-violet-500/20 text-violet-400 flex items-center justify-center font-mono font-bold text-lg">
+                    AI
+                </div>
+                <h3 class="font-bold text-white text-base">هوش مصنوعی و اتوماسیون</h3>
+                <ul class="text-xs text-slate-300 space-y-2">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-violet-400"></span>معماری پلتفرم‌های SaaS هوش مصنوعی</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-violet-400"></span>کار با پروتکل‌های MCP و ایجنت‌ها</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-violet-400"></span>اسکریپت‌نویسی اتوماسیون پایتون</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-violet-400"></span>اتصال به APIهای OpenAI و Gemini</li>
+                </ul>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="glass-card rounded-2xl p-6 border border-white/10 space-y-4">
+                <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-lg">
+                    UI
+                </div>
+                <h3 class="font-bold text-white text-base">فرانت‌اند و دیزاین مدرن</h3>
+                <ul class="text-xs text-slate-300 space-y-2">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>Tailwind CSS & Modern HTML5</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>طراحی اصولی سیستم‌های RTL</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>طراحی رابط کاربری در Figma</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>توسعه تم‌های سبک بدون وابستگی</li>
+                </ul>
+            </div>
+
+            <!-- Box 4 -->
+            <div class="glass-card rounded-2xl p-6 border border-white/10 space-y-4">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-mono font-bold text-lg">
+                    CF
+                </div>
+                <h3 class="font-bold text-white text-base">زیرساخت ابری و سرورلس</h3>
+                <ul class="text-xs text-slate-300 space-y-2">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Cloudflare Workers (Edge Computing)</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>حل مشکلات مسدودی و فیلترینگ تلگرام</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>تنظیمات CDN، کشینگ Redis و امنیت</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>ارتقای رتبه Core Web Vitals</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Background Section -->
+    <section class="max-w-7xl mx-auto px-6 md:px-12 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Education -->
+            <div class="glass-card rounded-2xl p-6 border border-white/10 flex items-start gap-5">
+                <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0 border border-indigo-500/20">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+                </div>
+                <div>
+                    <span class="text-xs font-mono text-indigo-400">تحصیلات دانشگاهی</span>
+                    <h3 class="text-lg font-bold text-white mt-1">کارشناسی مهندسی پزشکی (گرایش بیوالکتریک)</h3>
+                    <p class="text-sm text-slate-400 mt-1">دانشگاه پیام نور (۱۳۹۵ – ۱۳۹۹)</p>
+                    <div class="inline-block mt-3 px-3 py-1 rounded-lg bg-indigo-500/20 text-indigo-300 font-mono text-xs font-semibold">
+                        معدل کل: ۱۷.۰۰ / ۲۰.۰۰
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="glass-card rounded-2xl p-6 border border-white/10 flex items-start gap-5">
+                <div class="w-12 h-12 rounded-2xl bg-violet-500/10 text-violet-400 flex items-center justify-center shrink-0 border border-violet-500/20">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                </div>
+                <div class="flex-1">
+                    <span class="text-xs font-mono text-violet-400">مهارت‌های زبانی</span>
+                    <h3 class="text-lg font-bold text-white mt-1">تسلط چندزبانه برای پروژه‌های بین‌المللی</h3>
+                    <div class="grid grid-cols-3 gap-2 mt-3 text-center">
+                        <div class="p-2 rounded-lg bg-white/[0.02] border border-white/5">
+                            <span class="block text-xs font-bold text-white">فارسی</span>
+                            <span class="text-[10px] text-slate-400">زبان مادری</span>
+                        </div>
+                        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                            <span class="block text-xs font-bold text-emerald-300">عربی</span>
+                            <span class="text-[10px] text-emerald-400">پیشرفته و روان</span>
+                        </div>
+                        <div class="p-2 rounded-lg bg-indigo-500/10 border border-indigo-500/20">
+                            <span class="block text-xs font-bold text-indigo-300">انگلیسی</span>
+                            <span class="text-[10px] text-indigo-400">تخصصی فنی</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer & Contact CTA -->
+    <footer id="contact" class="max-w-7xl mx-auto px-6 md:px-12 py-16 border-t border-white/5">
+        <div class="glass-card rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-transparent to-violet-500/10 pointer-events-none"></div>
+            
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">آماده خلق پروژه‌های متمایز و پرسرعت هستید؟</h2>
+            <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-8 font-light">
+                برای مشاوره، طراحی افزونه اختصاصی، بهینه‌سازی فروشگاه یا توسعه پلتفرم‌های هوش مصنوعی می‌توانید مستقیماً با من در تماس باشید.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="https://t.me/mohamad_nemat" target="_blank" class="px-6 py-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-semibold text-sm transition-all shadow-lg shadow-sky-500/20 flex items-center gap-2">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.946z"/></svg>
+                    <span>ارتباط در تلگرام</span>
+                </a>
+                <a href="https://wa.me/989010395404" target="_blank" class="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all shadow-lg shadow-emerald-600/20 flex items-center gap-2">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.399 0 0 5.396 0 12.028c0 2.115.553 4.18 1.603 5.998L.069 24l6.155-1.616c1.748.953 3.727 1.455 5.807 1.455 6.632 0 12.03-5.398 12.03-12.03C24.061 5.396 18.663 0 12.031 0zm.001 22.02c-1.786 0-3.535-.48-5.06-1.386l-.363-.215-3.76.986 1.004-3.666-.236-.376c-.996-1.585-1.522-3.418-1.522-5.334 0-5.526 4.496-10.022 10.024-10.022 5.526 0 10.022 4.496 10.022 10.022 0 5.527-4.496 10.023-10.022 10.023zm5.49-7.514c-.301-.151-1.782-.88-2.058-.981-.277-.101-.478-.151-.679.151-.202.301-.78 0.981-.956 1.183-.176.202-.352.226-.653.076-.301-.151-1.272-.469-2.423-1.496-.896-.799-1.5-1.786-1.677-2.088-.176-.301-.019-.464.132-.614.136-.135.301-.352.452-.528.151-.176.201-.301.301-.502.101-.202.05-.377-.025-.528-.076-.151-.679-1.635-.93-2.239-.244-.589-.493-.509-.679-.519-.176-.01-.377-.01-.578-.01-.202 0-.528.076-.804.377-.277.301-1.055 1.031-1.055 2.515s1.08 2.917 1.231 3.118c.151.202 2.126 3.245 5.15 4.553.719.311 1.28.497 1.718.636.723.23 1.381.198 1.901.12.579-.087 1.782-.728 2.033-1.431.251-.703.251-1.306.176-1.431-.075-.125-.276-.201-.577-.352z"/></svg>
+                    <span>واتساپ مستقیم</span>
+                </a>
+                <a href="mailto:mamadnemat061@gmail.com" class="px-6 py-3.5 rounded-xl glass-panel hover:bg-white/10 text-white font-semibold text-sm border border-white/10 transition-all flex items-center gap-2">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <span>mamadnemat061@gmail.com</span>
+                </a>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-white/5 text-xs text-slate-500 font-mono">
+                © 2026 Mohammad Nemat-Zadeh. Designed & Engineered with precision. Hosted on GitHub Pages.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Filter JS -->
+    <script>
+        function filterProjects(category) {
+            // Update active button
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filter cards
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
