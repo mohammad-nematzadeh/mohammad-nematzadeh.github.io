@@ -24,7 +24,8 @@
             borderMuted: 'rgba(255, 255, 255, 0.07)',
             accentBlue: '#38bdf8',
             accentIndigo: '#818cf8',
-            accentEmerald: '#34d399'
+            accentEmerald: '#34d399',
+            accentCyan: '#00E5FF'
           },
           fontFamily: {
             sans: ['Vazirmatn', 'sans-serif'],
@@ -161,7 +162,7 @@
               <li>
                 <a href="#projects" class="nav-item group flex items-center gap-3 py-1 text-xs text-slate-400 hover:text-white transition-all">
                   <span class="nav-indicator h-px w-6 bg-slate-600 transition-all group-hover:w-12 group-hover:bg-slate-200"></span>
-                  <span class="nav-text font-mono uppercase tracking-widest text-slate-400 group-hover:text-white transition-colors">۰۳ // فروشگاه‌های شاخص و پلتفرم‌ها</span>
+                  <span class="nav-text font-mono uppercase tracking-widest text-slate-400 group-hover:text-white transition-colors">۰۳ // پروژه‌ها و پلتفرم‌های شاخص</span>
                 </a>
               </li>
               <li>
@@ -247,7 +248,70 @@
               </ul>
             </div>
 
-            <!-- Plugin 2: BIOS Podcast -->
+            <!-- Plugin 2: SabadAsa Checkout -->
+            <div class="group relative rounded-2xl craft-card p-6">
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="font-mono text-emerald-400 font-medium">Conversion Optimization Plugin</span>
+                <span class="font-mono text-slate-400">WC 8.0 & 9.0+ Ready</span>
+              </div>
+              <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors flex items-center gap-1.5">
+                افزونه تسویه حساب سبدآسا (SabadAsa Checkout)
+                <svg class="h-4 w-4 inline-block transition-transform duration-200 group-hover:-translate-x-1 group-hover:-translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </h3>
+              <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+                سیستم افزایش نرخ تبدیل فروشگاهی شامل تسویه حساب تک‌مرحله‌ای (One-Page Checkout)، سبد خرید کشویی شناور (Drawer Cart)، پیشنهاد ویژه تک‌کلیکی پیش از پرداخت (Order Bump) و ماژول زمان‌بندی هوشمند ارسال با تقویم شمسی.
+              </p>
+              <ul class="mt-4 flex flex-wrap gap-1.5 font-mono text-[11px]">
+                <li class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">One-Page Checkout</li>
+                <li class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">Drawer Cart</li>
+                <li class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">Order Bump</li>
+                <li class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">Jalali Scheduler</li>
+              </ul>
+            </div>
+
+            <!-- Plugin 3: Smart Importer -->
+            <div class="group relative rounded-2xl craft-card p-6">
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="font-mono text-blue-400 font-medium">Bulk Ingestion Engine</span>
+                <span class="font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">Chunked AJAX</span>
+              </div>
+              <h3 class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors flex items-center gap-1.5">
+                افزونه هوشمند درون‌ریزی محصولات (Smart Importer)
+                <svg class="h-4 w-4 inline-block transition-transform duration-200 group-hover:-translate-x-1 group-hover:-translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </h3>
+              <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+                ابزار درون‌ریزی بدون وقفه فایل‌های اکسل (.xlsx) و CSV برای ووکامرس؛ پردازش دسته‌های ۵تایی با ایجکس جهت مهار خطاهای Memory Limit و Timeout سرور، ساخت خودکار محصولات ساده و چندمتغیره همراه با سلسله‌مراتب درختی دسته‌بندی‌ها.
+              </p>
+              <ul class="mt-4 flex flex-wrap gap-1.5 font-mono text-[11px]">
+                <li class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20">Chunked Processing</li>
+                <li class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20">Excel & CSV Parsing</li>
+                <li class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20">Variable Product Mapper</li>
+                <li class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20">Zero Timeout</li>
+              </ul>
+            </div>
+
+            <!-- Plugin 4: Bale Support & Orders -->
+            <div class="group relative rounded-2xl craft-card p-6">
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="font-mono text-teal-400 font-medium">Bale Messenger Bridge</span>
+                <span class="font-mono text-emerald-400">Direct Webhook API</span>
+              </div>
+              <h3 class="text-lg font-bold text-white group-hover:text-teal-300 transition-colors flex items-center gap-1.5">
+                افزونه پشتیبانی کاربران و اعلان سفارشات در پیام‌رسان بله
+                <svg class="h-4 w-4 inline-block transition-transform duration-200 group-hover:-translate-x-1 group-hover:-translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </h3>
+              <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+                اتصال مستقیم فروشگاه ووکامرس به پیام‌رسان بله؛ ارائه ویجت چت زنده و تیکتینگ برای کاربران در سایت و ارسال خودکار و لحظه‌ای فاکتورها، اقلام سفارش و پیام‌های پشتیبانی به کلاینت بله مدیران بدون نیاز به پروکسی خارجی.
+              </p>
+              <ul class="mt-4 flex flex-wrap gap-1.5 font-mono text-[11px]">
+                <li class="px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-300 border border-teal-500/20">Bale Bot API</li>
+                <li class="px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-300 border border-teal-500/20">Live Chat Widget</li>
+                <li class="px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-300 border border-teal-500/20">Order Alerts</li>
+                <li class="px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-300 border border-teal-500/20">Domestic Messaging</li>
+              </ul>
+            </div>
+
+            <!-- Plugin 5: BIOS Podcast -->
             <div class="group relative rounded-2xl craft-card p-6">
               <div class="flex items-center justify-between text-xs mb-2">
                 <span class="font-mono text-cyan-400 font-medium">Podcast Automation & Player</span>
@@ -271,7 +335,7 @@
               </ul>
             </div>
 
-            <!-- Plugin 3: Cloudflare Workers Telegram Notifier -->
+            <!-- Plugin 6: Cloudflare Workers Telegram Notifier -->
             <div class="group relative rounded-2xl craft-card p-6">
               <div class="flex items-center justify-between text-xs mb-2">
                 <span class="font-mono text-amber-400 font-medium">Serverless Edge Microservice</span>
@@ -292,7 +356,7 @@
               </ul>
             </div>
 
-            <!-- Plugin 4: Python WooCommerce Bulk Automation -->
+            <!-- Plugin 7: Python WooCommerce Bulk Automation -->
             <div class="group relative rounded-2xl craft-card p-6">
               <div class="flex items-center justify-between text-xs mb-2">
                 <span class="font-mono text-violet-400 font-medium">Data Pipeline & Automation</span>
@@ -316,15 +380,45 @@
           </div>
         </section>
 
-        <!-- SECTION 3: FEATURED PROJECTS & COMMERCE ARCHITECTURE -->
+        <!-- SECTION 3: FEATURED PROJECTS & PLATFORMS -->
         <section id="projects" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24">
           <div class="sticky top-0 z-20 -mx-6 mb-6 w-screen bg-bgDark/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-            <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only font-mono">۰۳ // فروشگاه‌های شاخص و پلتفرم‌ها</h2>
+            <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only font-mono">۰۳ // پروژه‌ها و پلتفرم‌های شاخص</h2>
           </div>
 
           <div class="space-y-6">
 
-            <!-- Project 1: 2mteam AI Platform -->
+            <!-- Project 1: DOPS Open Source Template -->
+            <div class="group relative rounded-2xl craft-card p-6 border-indigo-500/20">
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="font-mono text-cyan-400 font-medium">Open Source Front-end Web App</span>
+                <div class="flex items-center gap-3">
+                  <a href="https://github.com/mohammad-nematzadeh/dops" target="_blank" rel="noreferrer" class="font-mono text-slate-400 hover:text-white transition-colors flex items-center gap-1">
+                    گیت‌هاب
+                    <svg class="h-3 w-3 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                  </a>
+                  <a href="https://mohammad-nematzadeh.github.io/dops/" target="_blank" rel="noreferrer" class="font-mono text-emerald-400 hover:text-emerald-300 font-medium transition-colors flex items-center gap-1 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                    مشاهده لایو
+                    <svg class="h-3 w-3 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                  </a>
+                </div>
+              </div>
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors flex items-center gap-1.5">
+                قالب پادکست داپس (DOPS — Cybernetic Dark OLED)
+                <svg class="h-4 w-4 inline-block transition-transform duration-200 group-hover:-translate-x-1 group-hover:-translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </h3>
+              <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+                پوسته حرفه‌ای پادکست با ۶ صفحه مستقل، موتور اختصاصی پلیر صوتی شناور سراسری و باتم‌شیت لمسی موبایل، انیمیشن مداری ۳۶۰ درجه هیرو با پردازش سخت‌افزاری GPU و چرخش معکوس زاویه‌ای، نمودارهای تحلیلی SVG و استقلال ۱۰۰٪ آفلاین (بدون وابستگی به CDN خارجی).
+              </p>
+              <ul class="mt-4 flex flex-wrap gap-1.5 font-mono text-[11px]">
+                <li class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">HTML5 Audio API</li>
+                <li class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">GPU 60fps Animation</li>
+                <li class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">Zero CDN Dependency</li>
+                <li class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">SVG Interactive Chart</li>
+              </ul>
+            </div>
+
+            <!-- Project 2: 2mteam AI Platform -->
             <div class="group relative rounded-2xl craft-card p-6">
               <div class="flex items-center justify-between text-xs mb-2">
                 <span class="font-mono text-indigo-400 font-medium">AI SaaS Platform</span>
@@ -348,7 +442,7 @@
               </ul>
             </div>
 
-            <!-- Project 2: Nilson Shop -->
+            <!-- Project 3: Nilson Shop -->
             <div class="group relative rounded-2xl craft-card p-6">
               <div class="flex items-center justify-between text-xs mb-2">
                 <span class="font-mono text-pink-400 font-medium">High-Scale E-Commerce</span>
@@ -371,7 +465,7 @@
               </ul>
             </div>
 
-            <!-- Project 3: Japatoo -->
+            <!-- Project 4: Japatoo -->
             <div class="group relative rounded-2xl craft-card p-6">
               <div class="flex items-center justify-between text-xs mb-2">
                 <span class="font-mono text-emerald-400 font-medium">Interactive Fashion Retail</span>
@@ -394,7 +488,7 @@
               </ul>
             </div>
 
-            <!-- Project 4: Avin Club -->
+            <!-- Project 5: Avin Club -->
             <div class="group relative rounded-2xl craft-card p-6">
               <div class="flex items-center justify-between text-xs mb-2">
                 <span class="font-mono text-sky-400 font-medium">Sports Footwear Specialist</span>
@@ -417,7 +511,7 @@
               </ul>
             </div>
 
-            <!-- Project 5: Abji Store -->
+            <!-- Project 6: Abji Store -->
             <div class="group relative rounded-2xl craft-card p-6">
               <div class="flex items-center justify-between text-xs mb-2">
                 <span class="font-mono text-purple-400 font-medium">Beauty & Cosmetics Retail</span>
@@ -440,23 +534,24 @@
               </ul>
             </div>
 
-            <!-- Project 6: DOPS Podcast Template -->
+            <!-- Project 7: VANTA 3D Web Experience -->
             <div class="group relative rounded-2xl craft-card p-6">
               <div class="flex items-center justify-between text-xs mb-2">
-                <span class="font-mono text-teal-400 font-medium">Commercial Web Template</span>
-                <span class="font-mono text-slate-400">Marketplace Ready</span>
+                <span class="font-mono text-amber-400 font-medium">3D Web Experience</span>
+                <span class="font-mono text-slate-400">WebGL & Studio Lighting</span>
               </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-teal-300 transition-colors flex items-center gap-1.5">
-                قالب تجاری دوپس (DOPS Podcast RTL Template)
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                وب‌سایت تعاملی و سه‌بعدی وانتا (VANTA Hypercar Editorial)
                 <svg class="h-4 w-4 inline-block transition-transform duration-200 group-hover:-translate-x-1 group-hover:-translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               </h3>
               <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
-                قالب فوق‌سریع و ماژولار پادکست به سبک راست‌چین (RTL) با Tailwind CSS؛ بدون فریم‌ورک‌های سنگین با پلیر صوتی اختصاصی و زمان لود زیر ۱ ثانیه.
+                لندینگ پیج تعاملی سوپراسپرت با افکت گرین سینمایی (Film Grain)، کرسر دقیق سفارشی، نورپردازی سه‌بعدی استودیویی و شتاب‌دهنده گرافیکی GPU.
               </p>
               <ul class="mt-4 flex flex-wrap gap-1.5 font-mono text-[11px]">
-                <li class="px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-300 border border-teal-500/20">Tailwind CSS</li>
-                <li class="px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-300 border border-teal-500/20">100% RTL Native</li>
-                <li class="px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-300 border border-teal-500/20">Sub-second Load</li>
+                <li class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-300 border border-amber-500/20">WebGL / Canvas</li>
+                <li class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-300 border border-amber-500/20">Custom Cursor</li>
+                <li class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-300 border border-amber-500/20">Cinematic Grain</li>
+                <li class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-300 border border-amber-500/20">Audio / Video Sync</li>
               </ul>
             </div>
 
@@ -493,7 +588,7 @@
                 <li>• Tailwind CSS & Semantic HTML5</li>
                 <li>• طراحی استاندارد راست‌چین (RTL Native)</li>
                 <li>• جاوااسکریپت تعاملی و ماژولار (ES6+)</li>
-                <li>• پیاده‌سازی دقیق طرح‌های رابط کاربری</li>
+                <li>• انیمیشن‌های مداری ۶۰ فریم با شتاب سخت‌افزاری</li>
               </ul>
             </div>
 
@@ -504,7 +599,7 @@
               </h4>
               <ul class="text-xs text-slate-300 space-y-1.5 font-light">
                 <li>• Cloudflare Workers (Edge Computing)</li>
-                <li>• عبور بدون افت از فیلترینگ تلگرام</li>
+                <li>• وب‌هوک‌های بلادرنگ تلگرام و پیام‌رسان بله</li>
                 <li>• بهینه‌سازی شاخص‌های Core Web Vitals</li>
                 <li>• LiteSpeed Cache & CDN Routing</li>
               </ul>
@@ -516,10 +611,10 @@
                 هوش مصنوعی و اتوماسیون
               </h4>
               <ul class="text-xs text-slate-300 space-y-1.5 font-light">
-                <li>• اسکریپت‌های پایتون و خط لوله داده</li>
+                <li>• اسکریپت‌های پایتون و خط لوله داده (ETL)</li>
+                <li>• رندرینگ خودکار موکاپ‌ها با Playwright و Python</li>
                 <li>• استریم بلادرنگ توکن‌ها (SSE)</li>
                 <li>• تسلط بر ابزارهای ایجنتی هوش مصنوعی</li>
-                <li>• یکپارچه‌سازی ابزارهای پروتکل MCP</li>
               </ul>
             </div>
 
